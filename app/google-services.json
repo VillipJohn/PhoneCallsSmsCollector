@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "744160048054",
+    "firebase_url": "https://phonecallssmscollector.firebaseio.com",
+    "project_id": "phonecallssmscollector",
+    "storage_bucket": "phonecallssmscollector.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744160048054:android:669b5f67bd4642c8",
+        "android_client_info": {
+          "package_name": "com.villip.phonecallssmscollector"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744160048054-vtjmah50qvp6cvgmer7a0cc0dffub51b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.villip.phonecallssmscollector",
+            "certificate_hash": "f7e99e7a032c489055698e67c97e9a4cff4306be"
+          }
+        },
+        {
+          "client_id": "744160048054-nog5uoqgqiri40m681d50l9ot000mbin.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY8Mj7mfmliQB6lmGizxZCHhUS9-EUmgs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744160048054-nog5uoqgqiri40m681d50l9ot000mbin.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
