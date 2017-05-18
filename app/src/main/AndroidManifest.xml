@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:screenOrientation="portrait"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,26 +25,26 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".CallReceiver">
+        <receiver android:name=".receiver.CallReceiver">
             <intent-filter android:priority="2147483647">
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name=".SmsReceiver"
+            android:name=".receiver.SmsReceiver"
             android:enabled="true">
             <intent-filter android:priority="2147483647">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".EmailPasswordActivity" />
-        <activity android:name=".ListCallSmsActivity"
+        <activity android:name=".ui.EmailPasswordActivity" />
+        <activity android:name=".ui.ListCallSmsActivity"
                   android:screenOrientation="portrait"/>
-        <activity android:name=".AdminActivity" />
+        <activity android:name=".ui.AdminActivity" />
 
         <service
-            android:name=".NotEmptyListService"
+            android:name=".service.NotEmptyListService"
             android:enabled="true"
             android:exported="true"></service>
     </application>

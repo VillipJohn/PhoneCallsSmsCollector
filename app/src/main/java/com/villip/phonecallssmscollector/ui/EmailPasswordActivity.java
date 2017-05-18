@@ -1,4 +1,4 @@
-package com.villip.phonecallssmscollector;
+package com.villip.phonecallssmscollector.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.villip.phonecallssmscollector.R;
 
 /**
  * Created by villip on 08.05.2017.
@@ -79,7 +80,7 @@ public class EmailPasswordActivity extends AppCompatActivity implements View.OnC
 
     public void signin(String email , String password)
     {
-        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(EmailPasswordActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {

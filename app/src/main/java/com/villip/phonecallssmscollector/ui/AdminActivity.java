@@ -1,4 +1,4 @@
-package com.villip.phonecallssmscollector;
+package com.villip.phonecallssmscollector.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,11 +7,16 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+
+import com.villip.phonecallssmscollector.R;
 
 public class AdminActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText etAdminPassword;
     private Button ok;
+    private CheckBox soundCheckBox;
 
     SharedPreferences mySharedPreferences;
 
@@ -21,8 +26,8 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_admin);
 
         etAdminPassword = (EditText) findViewById(R.id.etAdminPassword);
-
         ok =(Button) findViewById(R.id.btnOkAdmin);
+        soundCheckBox = (CheckBox) findViewById(R.id.checkBox);
 
         ok.setOnClickListener(this);
 
@@ -32,6 +37,22 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
             Intent intent = new Intent(this, ListCallSmsActivity.class);
             startActivity(intent);
         }
+
+        soundCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    SharedPreferences.Editor e = mySharedPreferences.edit();
+                    e.putString("soundCheck", "yes");
+                    e.apply();
+                }
+                else {
+                    SharedPreferences.Editor e = mySharedPreferences.edit();
+                    e.putString("soundCheck", "no");
+                    e.apply();
+                }
+            }
+        });
     }
 
     @Override

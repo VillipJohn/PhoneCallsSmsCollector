@@ -1,4 +1,4 @@
-package com.villip.phonecallssmscollector;
+package com.villip.phonecallssmscollector.ui;
 
 import android.Manifest;
 import android.content.Context;
@@ -11,17 +11,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.villip.phonecallssmscollector.R;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText etStartPassword, etPhoneName;
 
     SharedPreferences mySharedPreferences;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //запрос пермишенов при первом запуске приложения
         ActivityCompat.requestPermissions(this,
                 new String[]{Manifest.permission.RECEIVE_SMS, Manifest.permission.READ_PHONE_STATE},
                 1);
